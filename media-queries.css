@@ -1,9 +1,8 @@
 @media screen and (min-width: 400px) {
     body {
         font-family: 'Raleway', sans-serif;
-        width: 100%;
         height: 95vh;
-        margin: 2.5vh;
+        margin: 2.5vh 2%;
         display: grid;
         text-align: center;
         grid-template-columns: 1fr;
@@ -20,10 +19,10 @@
     .alert-info {
         grid-area: alert;
         background-color: rgb(192, 255, 255);
-        margin: 20px;
         border: 2px solid rgb(211, 211, 211);
-        padding: 20px 50px;
-        height: 40px;
+        padding: 25px 0;
+        font-size: 1.5em;
+        margin-bottom: 15px;
     }
     .alert-info a {
         text-decoration: none;
@@ -34,28 +33,46 @@
         font-size: 4em;
         font-weight: bold;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: .7em;
 
     }
     nav {
         grid-area: nav-links;
 
     }
-    .header-img {grid-area: img}
-    .main {grid-area: main}
-    .sub-section {grid-area: sub}
-    footer {grid-area: footer}
     li {
-        list-style: none;
-        background-color: rgb(204, 204, 204);
-        margin: auto;
-        margin-top: 1em;
-        margin-right: 1em;
-        /*height: 2vh;*/
-        padding: 2.5em;
-        font-size: 50px;
-        font-weight: bold;
+         list-style: none;
+         background-color: rgb(204, 204, 204);
+         margin-left: -38px;
+         margin-top: .5em;
+         padding: 1em;
+         font-size: 50px;
+     }
+    .header-img {
+        grid-area: img;
+        margin-bottom: 10px;
     }
+    .header-img img {
+        width: 100%;
+        height: auto;
+    }
+    .main {
+        grid-area: main;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    .sub-section {
+        grid-area: sub;
+        text-align: left;
+        font-style: italic;
+        margin-bottom: 60px;
+    }
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+    }
+
 }
 @media screen and (min-width:960px) {
     body {
