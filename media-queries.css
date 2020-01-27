@@ -38,15 +38,16 @@
     }
     nav {
         grid-area: nav-links;
-
+    }
+    ul {
+        padding: 0;
     }
     li {
          list-style: none;
          background-color: rgb(204, 204, 204);
-         margin-left: -38px;
          margin-top: .5em;
          padding: 1em;
-         font-size: 50px;
+         font-size: 2em;
      }
     .header-img {
         grid-area: img;
