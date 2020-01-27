@@ -1,4 +1,4 @@
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 400px) and (max-width: 768px){
     body {
         font-family: 'Raleway', sans-serif;
         height: 95vh;
@@ -41,6 +41,7 @@
     }
     ul {
         padding: 0;
+
     }
     li {
          list-style: none;
@@ -75,10 +76,14 @@
     }
 
 }
-@media screen and (min-width:960px) {
+@media screen and (min-width:769px) {
     body {
+        font-family: 'Raleway', sans-serif;
+        height: 95vh;
+        margin: 0 2% 2.5vh 2%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+        grid-template-columns: 2fr 1fr;
         grid-template-rows: 1fr repeat(2, 4fr) 1fr;
         grid-template-areas:
                 "header nav-links"
@@ -87,10 +92,54 @@
                 "footer footer";
     }
     .hidden-on-desktop {display: none}
-    h1 {grid-area: header}
-    nav {grid-area: nav-links}
-    .header-img {grid-area: img}
-    .main {grid-area: main}
-    .sub-section {grid-area: sub}
-    footer {grid-area: footer}
+    h1 {
+        grid-area: header;
+        font-size: 4.4em;
+    }
+    nav {
+        grid-area: nav-links;
+        padding-top: 4em;
+    }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            list-style: none;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        li {
+            padding-left: 1.5em;
+        }
+
+    .header-img {
+        grid-area: img;
+        margin-bottom: 20px;
+    }
+    .header-img img {
+        width: 100%;
+        height: auto;
+    }
+    .main {
+        grid-area: main;
+        margin-right: 3em;
+    }
+    h2 {
+        margin-bottom: 2em;
+    }
+    .sub-section {
+        grid-area: sub;
+        font-style: italic;
+    }
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 15em;
+        margin-bottom: 5em;
+    }
 }
