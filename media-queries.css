@@ -1,6 +1,7 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 400px) {
     body {
         display: grid;
+        text-align: center;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(7, 1fr);
         grid-template-areas:
@@ -12,14 +13,26 @@
                 "sub"
                 "footer";
     }
-    .alert-info {grid-area: alert}
+    .alert-info {
+        grid-area: alert;
+        background-color: rgb(192, 255, 255);
+        margin: auto;
+        border: 1px solid rgb(211, 211, 211);
+        padding: 1em 2em;
+    }
+    .alert-info a {
+        text-decoration: none;
+        color: #000;
+    }
     h1 {grid-area: header}
     nav {grid-area: nav-links}
     .header-img {grid-area: img}
     .main {grid-area: main}
     .sub-section {grid-area: sub}
     footer {grid-area: footer}
-
+    li {
+        list-style: none;
+    }
 }
 @media screen and (min-width:960px) {
     body {
@@ -32,12 +45,11 @@
                 "main sub"
                 "footer footer";
     }
-  .hidden-on-desktop {display: none}
+    .hidden-on-desktop {display: none}
     h1 {grid-area: header}
     nav {grid-area: nav-links}
     .header-img {grid-area: img}
     .main {grid-area: main}
     .sub-section {grid-area: sub}
     footer {grid-area: footer}
-
 }
