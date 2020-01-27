@@ -2,10 +2,10 @@
     body {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 7fr;
+        grid-template-rows: repeat(7, 1fr);
         grid-template-areas:
                 "alert"
-                "company"
+                "header"
                 "nav-links"
                 "img"
                 "main"
@@ -13,7 +13,7 @@
                 "footer";
     }
     .alert-info {grid-area: alert}
-    h1 {grid-area: company}
+    h1 {grid-area: header}
     nav {grid-area: nav-links}
     .header-img {grid-area: img}
     .main {grid-area: main}
@@ -22,5 +22,22 @@
 
 }
 @media screen and (min-width:960px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr repeat(2, 4fr) 1fr;
+        grid-template-areas:
+                "header nav-links"
+                "img img"
+                "main sub"
+                "footer footer";
+    }
+  .hidden-on-desktop {display: none}
+    h1 {grid-area: header}
+    nav {grid-area: nav-links}
+    .header-img {grid-area: img}
+    .main {grid-area: main}
+    .sub-section {grid-area: sub}
+    footer {grid-area: footer}
 
 }
